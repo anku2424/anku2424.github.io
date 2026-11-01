@@ -1,0 +1,18 @@
+<svg width="680" height="680" viewBox="0 0 680 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="95" y1="90" x2="585" y2="602" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8D9B0"/>
+      <stop offset="1" stop-color="#E9E8C6"/>
+    </linearGradient>
+    <linearGradient id="fg" x1="180" y1="180" x2="500" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2F8D"/>
+      <stop offset="1" stop-color="#0B1A70"/>
+    </linearGradient>
+  </defs>
+  <circle cx="340" cy="340" r="300" fill="url(#bg)"/>
+  <circle cx="340" cy="340" r="300" stroke="#0B1A70" stroke-opacity="0.25" stroke-width="4"/>
+  <circle cx="340" cy="280" r="120" fill="url(#fg)" fill-opacity="0.14"/>
+  <path d="M188 512C227 429 294 388 340 388C386 388 453 429 492 512" stroke="#0B1A70" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="340" cy="279" r="92" stroke="#0B1A70" stroke-width="28"/>
+  <text x="340" y="610" text-anchor="middle" fill="#0B1A70" font-family="Sora, sans-serif" font-size="56" font-weight="700">Ankush</text>
+</svg>

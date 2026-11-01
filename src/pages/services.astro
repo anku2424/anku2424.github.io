@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Services" description="AI transformation consultation and senior AI development by Ankush Goyal.">
+  <section>
+    <h1 class="title-display">Services.</h1>
+    <p class="subtitle mt-8">
+      Two ways I typically work with teams: high‑ROI AI strategy, or hands‑on senior delivery.
+    </p>
+  </section>
+
+  <section class="mt-16 grid gap-6 lg:grid-cols-2">
+    <div class="card p-7">
+      <div class="overflow-hidden rounded-2xl border border-ink-700/20 bg-white/55">
+        <img
+          src="/project-images/AI transformation consultation.png"
+          alt="AI transformation consultation service visual"
+          width="1200"
+          height="720"
+          loading="lazy"
+          class="aspect-[16/9] h-full w-full object-cover"
+        />
+      </div>
+      <div class="mt-5 flex items-start justify-between gap-4">
+        <h2 class="text-xl font-bold tracking-tight text-ink-700">AI Transformation Consultation</h2>
+        <span class="chip">2–4 weeks</span>
+      </div>
+      <p class="mt-4 text-ink-600">
+        Discovery calls with stakeholders → research → a clear report with prioritized AI opportunities, feasibility, and next
+        steps.
+      </p>
+      <p class="mt-4 text-sm text-ink-600/85">Deliverables include ROI ranking, data readiness, architecture sketch, and rollout plan.</p>
+    </div>
+
+    <div class="card p-7">
+      <div class="overflow-hidden rounded-2xl border border-ink-700/20 bg-white/55">
+        <img
+          src="/project-images/AI development.png"
+          alt="Senior AI development service visual"
+          width="1200"
+          height="720"
+          loading="lazy"
+          class="aspect-[16/9] h-full w-full object-cover"
+        />
+      </div>
+      <div class="mt-5 flex items-start justify-between gap-4">
+        <h2 class="text-xl font-bold tracking-tight text-ink-700">Senior AI Development</h2>
+        <span class="chip">Hands‑on</span>
+      </div>
+      <p class="mt-4 text-ink-600">
+        End‑to‑end implementation of production-grade AI systems, with strong communication across technical and non‑technical
+        teams.
+      </p>
+      <p class="mt-4 text-sm text-ink-600/85">Common builds: RAG, chatbots, voice agents, and automation pipelines.</p>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <div class="card p-7">
+      <h2 class="text-xl font-bold tracking-tight text-ink-700">Let&apos;s work</h2>
+      <p class="mt-4 max-w-2xl text-ink-600">
+        If you share your context (goals, data sources, constraints), I’ll respond with suggested next steps.
+      </p>
+      <a href="/contact" class="btn-main mt-6">
+        Email me
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = await getCollection("projects");
+const projectBySlug = new Map(projects.map((project) => [project.slug, project]));
+const featuredOrder = [
+  "discovery-analysis-automation",
+  "inbound-voice-agent-patient-support",
+  "discovery-docs-qna-at-scale",
+  "audio-to-video-ai-generator"
+];
+const featuredProjects = featuredOrder
+  .map((slug) => projectBySlug.get(slug))
+  .filter((project): project is (typeof projects)[number] => Boolean(project));
+---
+
+<BaseLayout
+  title="Home"
+  description="Ankush Goyal — AI transformation consultation and senior AI development. Portfolio projects across legal, healthcare, and media."
+>
+  <section class="grid gap-14 pt-4 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
+    <div>
+      <p class="text-2xl font-semibold tracking-tight text-ink-700">Hello, I&apos;m Ankush,</p>
+      <h1 class="title-display mt-4">
+        AI Developer
+       <!-- <br />
+        Engineer -->
+      </h1>
+      <p class="mt-5 text-[2rem] font-semibold leading-tight tracking-tight text-ink-700 sm:text-[2.2rem]">
+        based in India.
+      </p>
+      <div class="mt-10 flex items-center gap-4">
+        <a href="/contact" class="btn-main">
+          Contact Me
+        </a>
+        <a class="link text-sm font-medium" href="/about">About</a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="profile-orb">
+        <img
+          src="/profile-avatar.jpg"
+          alt="Profile placeholder for Ankush Goyal"
+          class="profile-photo"
+          width="420"
+          height="420"
+          loading="eager"
+        />
+      </div>
+      <span class="deco-plus" aria-hidden="true">+++</span>
+      <span class="deco-lines" aria-hidden="true">////</span>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <div class="flex items-baseline justify-between gap-6">
+      <h2 class="text-xl font-bold tracking-tight text-ink-700">Featured Projects</h2>
+      <a class="link text-sm font-medium" href="/projects">View all</a>
+    </div>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

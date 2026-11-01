@@ -1,0 +1,20 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F2D5"/>
+      <stop offset="1" stop-color="#E2E9C5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <rect x="120" y="180" width="438" height="420" rx="28" fill="#FFFFFF" fill-opacity="0.58" stroke="#11227F" stroke-opacity="0.22"/>
+  <rect x="178" y="252" width="320" height="82" rx="20" fill="#11227F" fill-opacity="0.14"/>
+  <rect x="178" y="366" width="240" height="82" rx="20" fill="#11227F" fill-opacity="0.12"/>
+  <rect x="178" y="480" width="270" height="82" rx="20" fill="#11227F" fill-opacity="0.12"/>
+  <rect x="642" y="148" width="440" height="470" rx="30" fill="#11227F" fill-opacity="0.12" stroke="#11227F" stroke-opacity="0.24"/>
+  <rect x="724" y="244" width="276" height="210" rx="26" fill="#FFFFFF" fill-opacity="0.66"/>
+  <circle cx="822" cy="338" r="22" fill="#11227F" fill-opacity="0.5"/>
+  <circle cx="902" cy="338" r="22" fill="#11227F" fill-opacity="0.5"/>
+  <path d="M772 394C792 420 820 434 852 434C884 434 912 420 932 394" stroke="#11227F" stroke-opacity="0.62" stroke-width="12" stroke-linecap="round"/>
+  <text x="632" y="694" fill="#11227F" font-family="Outfit, sans-serif" font-size="50" font-weight="700">Healthcare KB ERP Chatbot</text>
+</svg>
+

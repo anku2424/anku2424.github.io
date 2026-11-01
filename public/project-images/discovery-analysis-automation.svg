@@ -1,0 +1,19 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F2D6"/>
+      <stop offset="1" stop-color="#E8E6BE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <rect x="78" y="106" width="472" height="548" rx="28" fill="#FFFFFF" fill-opacity="0.62" stroke="#10237E" stroke-opacity="0.22"/>
+  <rect x="126" y="182" width="376" height="26" rx="10" fill="#10237E" fill-opacity="0.16"/>
+  <rect x="126" y="244" width="336" height="26" rx="10" fill="#10237E" fill-opacity="0.12"/>
+  <rect x="126" y="306" width="270" height="26" rx="10" fill="#10237E" fill-opacity="0.12"/>
+  <rect x="126" y="368" width="302" height="26" rx="10" fill="#10237E" fill-opacity="0.12"/>
+  <circle cx="840" cy="290" r="178" fill="#10237E" fill-opacity="0.12"/>
+  <circle cx="920" cy="376" r="140" fill="#10237E" fill-opacity="0.2"/>
+  <text x="620" y="582" fill="#10237E" font-family="Outfit, sans-serif" font-size="56" font-weight="700">Discovery Analysis</text>
+  <text x="620" y="646" fill="#10237E" font-family="Outfit, sans-serif" font-size="56" font-weight="700">Automation</text>
+</svg>
+

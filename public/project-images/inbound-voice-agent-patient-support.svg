@@ -1,0 +1,19 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="56" x2="1110" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F0D2"/>
+      <stop offset="1" stop-color="#DFE8C1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <circle cx="330" cy="374" r="196" fill="#122685" fill-opacity="0.12"/>
+  <circle cx="330" cy="374" r="130" fill="#122685" fill-opacity="0.2"/>
+  <path d="M276 372C288 410 318 448 352 474C404 454 440 404 452 354C430 290 388 256 334 254C298 282 280 326 276 372Z" fill="#122685" fill-opacity="0.3"/>
+  <path d="M500 260C554 278 592 322 604 374C592 426 554 470 500 488" stroke="#122685" stroke-opacity="0.5" stroke-width="18" stroke-linecap="round"/>
+  <path d="M552 216C624 244 674 300 692 374C674 448 624 504 552 532" stroke="#122685" stroke-opacity="0.35" stroke-width="18" stroke-linecap="round"/>
+  <rect x="700" y="196" width="412" height="372" rx="30" fill="#FFFFFF" fill-opacity="0.56" stroke="#122685" stroke-opacity="0.2"/>
+  <text x="744" y="332" fill="#122685" font-family="Outfit, sans-serif" font-size="52" font-weight="700">Inbound Voice</text>
+  <text x="744" y="392" fill="#122685" font-family="Outfit, sans-serif" font-size="52" font-weight="700">Agent</text>
+  <text x="744" y="452" fill="#122685" font-family="Outfit, sans-serif" font-size="52" font-weight="700">Patient Support</text>
+</svg>
+

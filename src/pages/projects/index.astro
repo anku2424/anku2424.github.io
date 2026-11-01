@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = await getCollection("projects");
+const projectsBySlug = new Map(projects.map((project) => [project.slug, project]));
+const featuredOrder = [
+  "discovery-analysis-automation",
+  "inbound-voice-agent-patient-support",
+  "discovery-docs-qna-at-scale",
+  "audio-to-video-ai-generator"
+];
+const featuredProjects = featuredOrder
+  .map((slug) => projectsBySlug.get(slug))
+  .filter((project): project is (typeof projects)[number] => Boolean(project));
+const featuredSlugs = new Set(featuredProjects.map((project) => project.slug));
+const clientWork = projects.filter((p) => p.data.kind === "Client Work");
+const sideProjects = projects.filter((p) => p.data.kind === "Side Project");
+const remainingClientWork = clientWork.filter((project) => !featuredSlugs.has(project.slug));
+const remainingSideProjects = sideProjects.filter((project) => !featuredSlugs.has(project.slug));
+---
+
+<BaseLayout title="Projects" description="Projects by Ankush Goyal across legal, healthcare, and media automation.">
+  <section>
+    <h1 class="title-display">Projects.</h1>
+    <p class="subtitle mt-8">
+      Client work and side projects across legal discovery, healthcare automation, and AI video pipelines.
+    </p>
+  </section>
+
+  <section class="mt-16">
+    <h2 class="text-xl font-bold tracking-tight text-ink-700">Featured projects</h2>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  {
+    remainingClientWork.length > 0 ? (
+      <section class="mt-16">
+        <h2 class="text-xl font-bold tracking-tight text-ink-700">More client work</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          {remainingClientWork.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    ) : null
+  }
+
+  {
+    remainingSideProjects.length > 0 ? (
+      <section class="mt-16">
+        <h2 class="text-xl font-bold tracking-tight text-ink-700">Side projects</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          {remainingSideProjects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    ) : null
+  }
+</BaseLayout>

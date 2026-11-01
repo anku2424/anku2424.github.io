@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink-700 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply mx-2 my-2 flex min-h-[calc(100vh-1rem)] flex-col rounded-[18px] border border-[#cdd3e0] bg-shell;
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-6xl px-5;
+  }
+
+  .card {
+    @apply rounded-3xl border border-ink-700/15 bg-white/35 shadow-sm transition;
+  }
+
+  .card-hover {
+    @apply hover:border-ink-700/30 hover:bg-white/50 hover:shadow-md;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-ink-700/20 bg-white/40 px-2.5 py-1 text-xs font-medium text-ink-700;
+  }
+
+  .link {
+    @apply text-ink-600 transition hover:text-ink-700;
+    text-decoration: none;
+  }
+
+  .btn-main {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold text-ink-700 transition;
+    background: #e8e370;
+    border: 1px solid rgba(11, 26, 112, 0.45);
+    box-shadow: 4px 4px 0 rgba(11, 26, 112, 0.18);
+  }
+
+  .btn-main:hover {
+    transform: translateY(-1px);
+    box-shadow: 6px 6px 0 rgba(11, 26, 112, 0.2);
+  }
+
+  .title-display {
+    @apply font-display text-5xl font-extrabold leading-[0.9] tracking-tight text-ink-700 sm:text-7xl;
+  }
+
+  .subtitle {
+    @apply max-w-2xl text-lg leading-relaxed text-ink-600;
+  }
+
+  .profile-orb {
+    @apply relative mx-auto aspect-square w-full max-w-[420px] rounded-full border border-ink-700/45 bg-[#f5f3dc];
+    display: grid;
+    place-items: center;
+  }
+
+  .profile-orb::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 9999px;
+    border: 1px solid rgba(11, 26, 112, 0.28);
+  }
+
+  .profile-photo {
+    @apply relative z-10 aspect-square w-[84%] rounded-full border border-ink-700/20 object-cover;
+  }
+
+  .deco-plus {
+    @apply absolute right-4 top-2 text-4xl leading-none text-ink-700/70;
+  }
+
+  .deco-lines {
+    @apply absolute bottom-12 left-2 rotate-[12deg] text-4xl leading-none text-ink-700/75;
+  }
+
+  .richtext {
+    @apply text-ink-600 leading-relaxed;
+  }
+
+  .richtext :where(h2) {
+    @apply mt-10 text-xl font-semibold text-ink-700;
+  }
+
+  .richtext :where(h3) {
+    @apply mt-8 text-lg font-semibold text-ink-700;
+  }
+
+  .richtext :where(p) {
+    @apply mt-4;
+  }
+
+  .richtext :where(ul) {
+    @apply mt-4 list-disc pl-6;
+  }
+
+  .richtext :where(li) {
+    @apply mt-2;
+  }
+
+  .richtext :where(a) {
+    @apply text-ink-700 underline decoration-ink-600/30 underline-offset-4 hover:decoration-ink-600/50;
+  }
+}
+
+@media (min-width: 640px) {
+  .site-shell {
+    margin: 1rem;
+    min-height: calc(100vh - 2rem);
+  }
+}

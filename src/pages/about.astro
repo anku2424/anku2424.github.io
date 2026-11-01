@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About" description="About Ankush Goyal — 8+ years building commercial AI, backend, and frontend systems.">
+  <section class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+    <div>
+      <h1 class="title-display">About.</h1>
+      <p class="subtitle mt-8">
+        I build practical AI products that solve real business bottlenecks. My work spans LLM systems, backend architecture,
+        frontend integration, and production rollout.
+      </p>
+      <p class="subtitle mt-6">
+        I have 8+ years of commercial engineering experience and graduated from BITS Pilani (Pilani Campus). On Upwork, I maintain
+        a 100% job success score, 5-star ratings, and $30k+ earned.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-2">
+        <span class="chip">RAG Systems</span>
+        <span class="chip">Voice Agents</span>
+        <span class="chip">Automation</span>
+        <span class="chip">Full Stack AI Delivery</span>
+      </div>
+      <a href="/contact" class="btn-main mt-8">
+        Work with me
+      </a>
+    </div>
+
+    <div class="card p-6 sm:p-7">
+      <h2 class="text-lg font-bold tracking-tight text-ink-700">Snapshot</h2>
+      <p class="mt-2 text-sm text-ink-600">Commercial delivery record across legal, healthcare, and media workflows.</p>
+      <div class="mt-5 grid grid-cols-2 gap-3">
+        <div class="rounded-2xl border border-ink-700/15 bg-white/45 p-4">
+          <p class="text-xs uppercase tracking-widest text-ink-600/80">Experience</p>
+          <p class="mt-2 text-2xl font-bold text-ink-700">8+ yrs</p>
+        </div>
+        <div class="rounded-2xl border border-ink-700/15 bg-white/45 p-4">
+          <p class="text-xs uppercase tracking-widest text-ink-600/80">Upwork</p>
+          <p class="mt-2 text-2xl font-bold text-ink-700">Top Rated</p>
+        </div>
+        <div class="rounded-2xl border border-ink-700/15 bg-white/45 p-4">
+          <p class="text-xs uppercase tracking-widest text-ink-600/80">Job Success</p>
+          <p class="mt-2 text-2xl font-bold text-ink-700">100%</p>
+        </div>
+        <div class="rounded-2xl border border-ink-700/15 bg-white/45 p-4">
+          <p class="text-xs uppercase tracking-widest text-ink-600/80">Earnings</p>
+          <p class="mt-2 text-2xl font-bold text-ink-700">$30k+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <div class="card p-4 sm:p-6">
+      <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+        <h2 class="text-xl font-bold tracking-tight text-ink-700">Upwork Profile Walkthrough</h2>
+        <span class="chip">Recorded scroll preview</span>
+      </div>
+      <div class="overflow-hidden rounded-2xl border border-ink-700/20 bg-white/55">
+        <img
+          src="/my-upwork-profile.gif"
+          alt="Scrolling walkthrough of Ankush Goyal's Upwork profile"
+          width="1724"
+          height="898"
+          loading="lazy"
+          class="aspect-[16/9] h-full w-full object-cover object-top"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <div class="grid gap-6 lg:grid-cols-3">
+      <div class="card p-6">
+        <h2 class="text-lg font-bold tracking-tight text-ink-700">Focus Areas</h2>
+        <ul class="mt-4 space-y-2 text-ink-600">
+          <li>• RAG + document intelligence at scale</li>
+          <li>• Chatbots over KB + databases</li>
+          <li>• Voice agents (inbound/outbound)</li>
+        </ul>
+      </div>
+
+      <div class="card p-6">
+        <h2 class="text-lg font-bold tracking-tight text-ink-700">How I Work</h2>
+        <ul class="mt-4 space-y-2 text-ink-600">
+          <li>• Clear milestones and weekly demos</li>
+          <li>• Business-first prioritization</li>
+          <li>• Reliable shipping with guardrails</li>
+        </ul>
+      </div>
+
+      <div class="card p-6">
+        <h2 class="text-lg font-bold tracking-tight text-ink-700">Best Fit</h2>
+        <ul class="mt-4 space-y-2 text-ink-600">
+          <li>• Teams starting AI transformation</li>
+          <li>• Ops-heavy workflows needing automation</li>
+          <li>• Products needing senior hands-on delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

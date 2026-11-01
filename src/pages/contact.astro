@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const email = "ankushgoyal9600@gmail.com";
+const subject = "AI Project Inquiry";
+---
+
+<BaseLayout title="Contact" description="Contact Ankush Goyal for AI consulting and development work.">
+  <section>
+    <h1 class="title-display">Contact.</h1>
+    <p class="subtitle mt-8">
+      The fastest way to reach me is email. Share what you’re building, your data sources, and the timeline.
+    </p>
+    <p class="mt-6 max-w-2xl text-ink-600">
+      I’ll reply with suggested next steps.
+    </p>
+    <div class="mt-10">
+      <a href={`mailto:${email}?subject=${encodeURIComponent(subject)}`} class="btn-main">
+        Email me
+      </a>
+    </div>
+  </section>
+</BaseLayout>

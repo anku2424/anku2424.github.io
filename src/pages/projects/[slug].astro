@@ -1,0 +1,99 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+type Props = {
+  project: CollectionEntry<"projects">;
+};
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<BaseLayout title={project.data.title} description={project.data.summary}>
+  <a class="link text-sm font-medium" href="/projects">← Back to projects</a>
+
+  <section class="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+    <header>
+      <p class="text-sm text-ink-600">{project.data.client} • {project.data.kind}</p>
+      <h1 class="mt-4 max-w-4xl font-display text-4xl font-extrabold tracking-tight leading-[0.95] text-ink-700 sm:text-6xl">
+        {project.data.title}
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-ink-600">{project.data.summary}</p>
+      {project.data.tags?.length ? (
+        <div class="mt-6 flex flex-wrap gap-2">
+          {project.data.tags.map((tag) => (
+            <span class="chip">{tag}</span>
+          ))}
+        </div>
+      ) : null}
+    </header>
+
+    <div class="card border border-ink-700/20 bg-white/60 p-4 sm:p-5">
+      <div class="overflow-hidden rounded-[1.3rem] border border-ink-700/25 bg-white/70">
+        <img
+          src={project.data.image}
+          alt={project.data.imageAlt ?? `${project.data.title} project image`}
+          width="1400"
+          height="840"
+          loading="eager"
+          class="aspect-[16/9] h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-12 grid gap-6 lg:grid-cols-2">
+    <div class="card p-7">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-ink-600/80">Stack</h2>
+      {project.data.stack?.length ? (
+        <ul class="mt-4 space-y-2 text-ink-600">
+          {project.data.stack.map((item) => (
+            <li>• {item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-4 text-ink-600">Varies by project.</p>
+      )}
+    </div>
+
+    <div class="card p-7">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-ink-600/80">Outcomes</h2>
+      {project.data.outcomes?.length ? (
+        <ul class="mt-4 space-y-2 text-ink-600">
+          {project.data.outcomes.map((item) => (
+            <li>• {item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-4 text-ink-600">Shareable outcomes available on request.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <div class="card p-7 sm:p-10">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-ink-600/80">Project Breakdown</h2>
+      <article class="richtext mt-6">
+        <Content />
+      </article>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <div class="card flex flex-col gap-5 p-7 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-lg text-ink-600">Need something like this for your business?</p>
+      <a href="/contact" class="btn-main w-fit">
+        Email me about this
+      </a>
+    </div>
+  </section>
+</BaseLayout>
